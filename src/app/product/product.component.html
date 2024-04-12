@@ -1,0 +1,30 @@
+<div class="container">
+  <input type="text" class="form-control mb-3" placeholder="Search for a dish" [(ngModel)]="searchTerm" (input)="filterMeals()">
+  <div *ngIf="loading; else content" class="text-center spin">
+    <div class="text-center">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div><br>
+      <strong>Loading...</strong>
+    </div>
+  </div>
+  <ng-template #content>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4"> 
+      <div class="col mb-4" *ngFor="let meal of filteredMeals; let i = index">
+        <div class="card custom-card">
+          <img [src]="meal.strMealThumb" class="card-img-top" alt="Meal Thumbnail">
+          <div class="card-body">
+            <div class="star-icons">
+              <ng-container *ngFor="let star of getStarArray(meal.rating)">
+                <i class="fas fa-star"></i>
+              </ng-container>
+            </div>
+            <h5 class="card-title">{{ meal.strMeal }}</h5>
+            <p class="card-text"><b>Amount</b> {{ meal.amount | currency:'INR' }}</p>
+            <button class="btn btn" (click)="addToCart(meals[i])"><i class="material-icons">shopping_cart</i>Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</div>

@@ -1,0 +1,30 @@
+button{
+    margin-bottom: 2%;
+}
+.qual,#delete{
+    margin: 0 1% 0 1%;
+    
+}
+.qual{
+    font-weight: 600;
+}
+#delete{
+    display: flex;
+    justify-content: center;
+    transition: .2s;
+}
+#delete:hover{
+    font-size: small;
+}
+mat-icon:hover{
+    opacity: .9;
+}
+.qual{
+    border-radius: 1rem ;
+    background-color: orange;
+}
+.card-title{
+    font-size:x-large;
+    font-weight: 600;
+    color: brown;
+}

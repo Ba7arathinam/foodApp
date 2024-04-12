@@ -1,0 +1,48 @@
+ /* cards */
+.container{
+  margin-top: 1rem;
+}
+ .custom-card {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;    border-radius: 1rex; }
+  
+  .card-title {
+    color: #9f5002;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  }
+  
+  .btn-orange {
+    font-weight: 600;
+    background-color: #f57c00; 
+    border-color: #f57c00; 
+  }
+  .star-icons{
+    display: flex;
+    justify-content: end;
+    color: rgb(255, 187, 0);
+  }
+  
+  .btn:hover {
+    background-color: #ff9800; 
+    border-color: #ff9800; 
+  }
+  button{
+    font-weight: 500;
+    display: flex;
+    background-color:  #ff9422;
+    color: rgb(6, 6, 6);
+    justify-content:center ;
+  }
+  
+ .spin{
+  margin: 7%;
+ }
+
+ img{
+  transition: .1s ease-in-out;
+ }
+img:hover{
+  opacity: .8;
+}
+
+ 
