@@ -8,10 +8,12 @@ import { Observable } from 'rxjs';
 export class FoodService {
 
   private   foodurl = 'https://balarathinam-foodapp-api.onrender.com/api/meals';
+  // private foodurl='http://localhost:9090/api/meals'
  private mailurl = 'https://balarathinam-foodapp-api.onrender.com'; 
   constructor(private http: HttpClient) { }
 
   getFood(): Observable<any> {
+   
     return this.http.get(this.foodurl);
   }
   sendEmail(formData: any) {

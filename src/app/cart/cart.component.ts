@@ -3,12 +3,13 @@ import { CartDataService } from '../services/cart-data.service';
 import { CurrencyPipe, NgFor, NgIf } from '@angular/common';
 import {MatIcon} from '@angular/material/icon'
 import { CartItem } from '../shared/model/cartItems';
+import { FormsModule } from '@angular/forms';
 
 
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [CurrencyPipe,NgIf,NgFor,MatIcon],
+  imports: [CurrencyPipe,NgIf,NgFor,MatIcon,FormsModule],
   providers:[CartDataService],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css'
