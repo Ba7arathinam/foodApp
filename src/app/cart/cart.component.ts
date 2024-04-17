@@ -4,12 +4,13 @@ import { CurrencyPipe, NgFor, NgIf } from '@angular/common';
 import {MatIcon} from '@angular/material/icon'
 import { CartItem } from '../shared/model/cartItems';
 import { FormsModule } from '@angular/forms';
+import { Router, RouterModule } from '@angular/router';
 
 
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [CurrencyPipe,NgIf,NgFor,MatIcon,FormsModule],
+  imports: [CurrencyPipe,NgIf,NgFor,MatIcon,FormsModule,RouterModule],
   providers:[CartDataService],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css'
@@ -20,9 +21,10 @@ export class CartComponent {
   totalAmount: number = 0;
 
 
-  constructor(private cartService: CartDataService) {}
+  constructor(private cartService: CartDataService,private route:Router) {}
 
   ngOnInit(): void {
+  
     this.cartItems = this.cartService.getCartItems();
     this.totalAmount = this.cartService.getTotalAmount();
   }
@@ -58,5 +60,8 @@ export class CartComponent {
 
   calculateAmount(item: CartItem): number {
     return item.food.amount * item.quantity;
+  }
+  payment(){
+    this.route.navigate(['payment'])
   }
 }

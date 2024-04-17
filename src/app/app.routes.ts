@@ -5,14 +5,16 @@ import { CartComponent } from './cart/cart.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { SiginComponent } from './sigin/sigin.component';
+import { PaymentComponent } from './payment/payment.component';
 
 
 export const routes: Routes = [
-    { path: 'home', component: HomeComponent, data: { title: 'Home' } },
-    { path: 'products', component: ProductComponent, data: { title: 'Products' } },
-    { path: 'cart', component: CartComponent, data: { title: 'Cart' } },
-    { path: 'contact', component: ContactComponent, data: { title: 'Contact' } },
-    { path: 'login', component: LoginComponent, data: { title: 'Login' } },
-    { path: 'signup', component: SiginComponent, data: { title: 'Signup' } },
-    { path: '**', redirectTo: 'login' }
+    { path: 'home', component: HomeComponent,   title: 'ORDERZIT|Home'  },
+    { path: 'products', component: ProductComponent,   title: 'ORDERZIT|Products'},
+    { path: 'cart', component: CartComponent,   title: 'ORDERZIT|Cart'  },
+    { path: 'contact', component: ContactComponent,   title: 'ORDERZIT|Contact'  },
+    { path: 'login', component: LoginComponent,   title: 'ORDERZIT|Login'  },
+    { path: 'signup', component: SiginComponent,   title: 'ORDERZIT|Signup'  },
+    {path:'payment',component:PaymentComponent,title:'ORDERZIT|Payment'},
+    { path: '**', redirectTo: 'ORDERZIT|login' }
 ];
