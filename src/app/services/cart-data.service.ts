@@ -8,7 +8,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class CartDataService {
   constructor() {}
-
+   transactionID:any;
   addToCart(item: any) {
     let cartItems: CartItem[] = this.getCartItems();
     const cartItem: any = {

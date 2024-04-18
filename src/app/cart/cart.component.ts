@@ -62,6 +62,6 @@ export class CartComponent {
     return item.food.amount * item.quantity;
   }
   payment(){
-    this.route.navigate(['payment'])
+    this.route.navigate(['payment']);
   }
 }

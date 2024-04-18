@@ -6,15 +6,17 @@ import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { SiginComponent } from './sigin/sigin.component';
 import { PaymentComponent } from './payment/payment.component';
+import { ConfirmationComponent } from './confirmation/confirmation.component';
 
 
 export const routes: Routes = [
-    { path: 'home', component: HomeComponent,   title: 'ORDERZIT|Home'  },
-    { path: 'products', component: ProductComponent,   title: 'ORDERZIT|Products'},
-    { path: 'cart', component: CartComponent,   title: 'ORDERZIT|Cart'  },
-    { path: 'contact', component: ContactComponent,   title: 'ORDERZIT|Contact'  },
-    { path: 'login', component: LoginComponent,   title: 'ORDERZIT|Login'  },
-    { path: 'signup', component: SiginComponent,   title: 'ORDERZIT|Signup'  },
-    {path:'payment',component:PaymentComponent,title:'ORDERZIT|Payment'},
-    { path: '**', redirectTo: 'ORDERZIT|login' }
+    { path: 'home', component: HomeComponent,   title: 'ORDERZIT | Home'  },
+    { path: 'products', component: ProductComponent,   title: 'ORDERZIT | Products'},
+    { path: 'cart', component: CartComponent,   title: 'ORDERZIT | Cart'  },
+    { path: 'contact', component: ContactComponent,   title: 'ORDERZIT | Contact'  },
+    { path: 'login', component: LoginComponent,   title: 'ORDERZIT | Login'  },
+    { path: 'signup', component: SiginComponent,   title: 'ORDERZIT | Signup'  },
+    {path:'payment',component:PaymentComponent,title:'ORDERZIT | Payment'},
+    {path:'confirmation',component:ConfirmationComponent,title:'ORDERZIT | confirmation'},
+    { path: '**', redirectTo: 'login' }
 ];

@@ -21,8 +21,6 @@ export class AppComponent {
     return !['/login', '/signup'].includes(window.location.pathname);
   }
 
-  get showFooter(): boolean {
-    return !['/login', '/signup'].includes(window.location.pathname);
-  }
+
 
 }
