@@ -1,12 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { CartItem } from '../../shared/model/cartItems';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FoodService {
-
+ 
   private   foodurl = 'https://balarathinam-foodapp-api.onrender.com/api/meals';
   // private foodurl='http://localhost:9090/api/meals'
  private mailurl = 'https://balarathinam-foodapp-api.onrender.com'; 

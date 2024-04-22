@@ -5,6 +5,7 @@ import {MatIcon} from '@angular/material/icon'
 import { CartItem } from '../shared/model/cartItems';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 
 @Component({
@@ -19,6 +20,7 @@ export class CartComponent {
 
   cartItems: CartItem[] = [];
   totalAmount: number = 0;
+  private cartSubscription!: Subscription;
 
 
   constructor(private cartService: CartDataService,private route:Router) {}
@@ -28,6 +30,7 @@ export class CartComponent {
     this.cartItems = this.cartService.getCartItems();
     this.totalAmount = this.cartService.getTotalAmount();
     console.log('end cart')
+  
   }
 
   decreaseQuantity(item: CartItem) {

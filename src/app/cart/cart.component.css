@@ -18,6 +18,7 @@ button{
 }
 #delete:hover{
    color: brown;
+ 
     font-size: small;
 }
 mat-icon:hover{
@@ -27,9 +28,11 @@ mat-icon:hover{
    background-color: transparent;
    border: none;
 }
-.qual{
-    background-color: orangered
+.qual:hover{
+    color: rgb(255, 149, 0);
+    font-weight: 900;
 }
+
 i{
     color: rgb(17, 16, 17);
     font-size: large;
@@ -51,3 +54,6 @@ img{
     font-size: larger;
     font-weight: 700;
 }
+
+
+

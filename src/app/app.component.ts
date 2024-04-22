@@ -18,7 +18,7 @@ export class AppComponent {
   title = 'foodApp';
  
    get showHeader(): boolean {
-    return !['/login', '/signup','/confirmation'].includes(window.location.pathname);
+    return !['/login', '/signup','/confirmation','/payment'].includes(window.location.pathname);
   }
 
 

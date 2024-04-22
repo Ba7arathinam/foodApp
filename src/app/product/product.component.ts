@@ -1,4 +1,4 @@
-import { CurrencyPipe, NgClass, NgFor, NgIf } from '@angular/common';
+import { CurrencyPipe, NgClass, NgFor, NgIf, NgStyle } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FoodService } from '../services/food/food.service';
@@ -19,6 +19,8 @@ import { MatCardModule } from '@angular/material/card';
     NgIf,
     FormsModule,
     FilterPipe,
+    NgClass,
+    NgStyle
   ],
   providers: [FoodService, Router, CartDataService],
   templateUrl: './product.component.html',
