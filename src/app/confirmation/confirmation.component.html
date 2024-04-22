@@ -27,13 +27,12 @@
           </div>
       
           <div class="bottomHalf">
-      
-            <p>Well Done!, you actually managed to accomplish something today...</p>
-      
-            <button id="alertMO" routerLink="/products">Continue Shoping</button>
-      
+            <b>{{responseData.message|uppercase}}</b><br>
+           <p><b>Payment Type:</b>{{responseData.data.paymentInstrument.type}}</p>
+            <p><b>Amount:</b>{{responseData.data.amount/100| currency:'INR'}}</p>
+            <p><b>TransactionId:</b>{{responseData.data.transactionId}}</p>
+            <button id="alertMO" (click)="continueShop()">Continue Shoping</button>
           </div>
-      
         </div>        
       
       </div>

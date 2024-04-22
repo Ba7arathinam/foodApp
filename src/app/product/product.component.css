@@ -38,11 +38,17 @@
   margin: 7%;
  }
 
+ button{
+  margin-top: 2rem;
+ }
  img{
   transition: .1s ease-in-out;
  }
 img:hover{
   opacity: .8;
+}
+.card-height{
+  min-height: 4vh;
 }
 
  

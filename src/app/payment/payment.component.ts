@@ -23,17 +23,20 @@ constructor(private Route:Router,private payment:CartDataService,private http:Ht
 }
 //PhonePe
 PhonePe():any{
-  this.http.get<any>('http://localhost:8080/pay?amount=' + this.totalAmount)
+  this.http.get<any>('https://balarathinam-phonepe-paymentgateway.onrender.com/pay?amount=' + this.totalAmount)
   .subscribe(
     (response) => {
-      // Handle success response, if needed
+
       window.location.href =response
     },
     (error) => {
-      // Handle error response
       console.error('Error initiating payment:', error);
     }
   );
+}
+//cancel
+cancel(){
+ this.Route.navigate(['/cart'])
 }
 
 }

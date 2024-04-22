@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { CartDataService } from '../services/cart-data.service';
 import { FormsModule } from '@angular/forms';
 import { FilterPipe } from '../pipes/filter.pipe';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-product',
@@ -52,6 +53,7 @@ export class ProductComponent {
   }
 
   ngOnInit() {
+    console.log('start product')
     this.val.getFood().subscribe(
       (res) => {
         this.loading = false;
@@ -63,6 +65,7 @@ export class ProductComponent {
         console.error('Error fetching data:', error);
       }
     );
+    console.log('end product')
   }
   filterMeals() {
     if (!this.searchTerm) {

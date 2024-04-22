@@ -3,6 +3,7 @@
   margin:0;
   padding: 0;
   box-sizing: border-box;
+ 
 }
 body  { 
   height: 100vh;
@@ -15,8 +16,7 @@ body  {
 }        
 
 .wrapperAlert {
-  width: 500px;
-  height: 400px;
+
   overflow: hidden;
   border-radius: 12px;
   border: thin solid #ddd;           
@@ -30,7 +30,7 @@ body  {
   position: relative;
   padding: 40px 0;
   background: rgb(0,0,0);
-  background: -webkit-linear-gradient(45deg, #019871, #a0ebcf);
+  background: -webkit-linear-gradient(45deg, #019845, #a0ebcf);
 }
 
 .topHalf p {
@@ -169,7 +169,7 @@ button {
   text-shadow: 0 1px rgba(128, 128, 128, 0.75);
 }
 button:hover {
-  background-color: #85ddbf;
+  background-color: #07af77;
 }
 .main-page{
     width: 100vw;
@@ -177,13 +177,11 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+   
 }
 .tick,.bottomHalf{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; 
-}
-.bottomHalf{
-    padding: 1rem;
 }

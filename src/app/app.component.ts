@@ -4,7 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { FoodService } from './services/food/food.service';
 import { FooterComponent } from './footer/footer.component';
 import { NgIf } from '@angular/common';
-import { filter } from 'rxjs';
+
 
 @Component({
   selector: 'app-root',
@@ -16,8 +16,8 @@ import { filter } from 'rxjs';
 })
 export class AppComponent {
   title = 'foodApp';
-
-  get showHeader(): boolean {
+ 
+   get showHeader(): boolean {
     return !['/login', '/signup','/confirmation'].includes(window.location.pathname);
   }
 

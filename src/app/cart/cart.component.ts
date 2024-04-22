@@ -24,9 +24,10 @@ export class CartComponent {
   constructor(private cartService: CartDataService,private route:Router) {}
 
   ngOnInit(): void {
-  
+    console.log('start cart')
     this.cartItems = this.cartService.getCartItems();
     this.totalAmount = this.cartService.getTotalAmount();
+    console.log('end cart')
   }
 
   decreaseQuantity(item: CartItem) {
