@@ -7,9 +7,11 @@ import { LoginComponent } from './login/login.component';
 import { SiginComponent } from './sigin/sigin.component';
 import { PaymentComponent } from './payment/payment.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
+import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 
 
 export const routes: Routes = [
+    { path: '', redirectTo: 'login', pathMatch: 'full' },
     { path: 'home', component: HomeComponent,   title: 'ORDERZIT | Home'  },
     { path: 'products', component: ProductComponent,   title: 'ORDERZIT | Products'},
     { path: 'cart', component: CartComponent,   title: 'ORDERZIT | Cart'  },
@@ -18,5 +20,6 @@ export const routes: Routes = [
     { path: 'signup', component: SiginComponent,   title: 'ORDERZIT | Signup'  },
     {path:'payment',component:PaymentComponent,title:'ORDERZIT | Payment'},
     {path:'confirmation',component:ConfirmationComponent,title:'ORDERZIT | confirmation'},
-    { path: '**', redirectTo: 'login' }
+    {path:'404NotFound',component:NotFoundPageComponent,title:'404 Not Found'},
+    { path: '**', redirectTo: '404NotFound' }
 ];

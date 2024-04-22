@@ -7,3 +7,32 @@ body{
 div{
     width: 40%;
 }
+.button {
+    position: relative;
+    border: 0;
+    transition: 0.5s;
+    z-index: 1;
+    min-width: 15rem;
+    padding: 1rem 2rem;
+    font-size: 0.875rem;
+    line-height: 1;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    background:chocolate;
+    color: white;
+  
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+    }
+
+    &.--pulse {
+        &:hover {
+          animation: pulse 1.5s infinite;
+        }
+      }
+    }

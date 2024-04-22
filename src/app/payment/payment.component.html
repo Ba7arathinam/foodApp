@@ -1,5 +1,5 @@
 <body>
-    <div #paymentRef style="display: flex;flex-direction: column-reverse; align-items: center; justify-content: center;">
+    <div  style="display: flex;flex-direction: column-reverse; align-items: center; justify-content: center;">
         <div class="alert alert-info" role="alert" style="width: 100%; height: 10rem;">
           <b style="text-align: center;"> Card Details </b>
           <p></p>
@@ -7,9 +7,12 @@
           <p><b>Expiry date:</b>  01/2025</p>
           <p><b>CVC code:</b>  434</p>
         </div>
-         
+            
             <button class="btn" style="display: flex;align-items: center; justify-content: center;">Cancle</button>
          <p>Total amount to pay: <b>{{totalAmount |currency:'INR'}}</b></p>
+         <button class="button --pulse" (click)="PhonePe()"><i class="fa-solid fa-lock"></i> pay Now</button>
+         <i style="color:rgb(21, 19, 19); margin-bottom: 2rem;" class="fa-brands fa-amazon-pay fa-beat fa-fw fa-10x" ></i> 
+        
     </div>
     
 </body>

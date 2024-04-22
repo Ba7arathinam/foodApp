@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class FoodService {
 
-  private   foodurl = 'https://balarathinam-foodapp-api.onrender.com/api/meals';
-  // private foodurl='http://localhost:9090/api/meals'
+  // private   foodurl = 'https://balarathinam-foodapp-api.onrender.com/api/meals';
+  private foodurl='http://localhost:9090/api/meals'
  private mailurl = 'https://balarathinam-foodapp-api.onrender.com'; 
   constructor(private http: HttpClient) { }
 
@@ -16,7 +16,7 @@ export class FoodService {
    
     return this.http.get(this.foodurl);
   }
-  sendEmail(formData: any) {
+  sendEmail(formData: any):Observable<any> {
     return this.http.post(`${this.mailurl}/send_email`, formData,{ responseType: 'text' });
   }
 }
