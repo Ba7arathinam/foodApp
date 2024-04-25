@@ -13,24 +13,23 @@
     background-color:  #ff5722;
     color: rgb(5, 7, 9);
     font-weight: 600;
-    transition: 1s;
+    transition: .3s;
   }
   
   .btn:hover {
     background-color: rgb(254, 125, 3);
   }
   
-  a {
-    color: black;
+  /* a li{
+    color: rgb(0, 0, 0);
     font-weight: 500;
-    transition: 0.3s;
+    transition: 0.5s;
   }
   
-  li:hover {
-    font-size: large;
+  a li:hover {
     background-color: rgb(255, 145, 0);
-    border-radius: 8px;
-  }
+    border-radius: 0px;
+  } */
   
   .nav_names ,li{
   
@@ -49,4 +48,12 @@
   nav{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
+  a:hover{
+    color: #ff5722;
+  }
   
+
+.nav-item .nav-link.active {
+  color: #ff5722; 
+  font-weight: 500;
+}
