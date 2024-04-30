@@ -26,12 +26,7 @@
     transition: 0.3s;
   }
   
-  li:hover {
-    font-size: large;
-    background-color: rgb(255, 145, 0);
-    border-radius: 8px;
-  }
-  
+ 
   .nav_names ,li{
   
     justify-content: center;
@@ -49,4 +44,19 @@
   nav{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
-  
+  .nav-item .nav-link .active{
+    color: #ff5722;
+    font-size: large;
+    background-color: rgb(255, 145, 0);
+    border-radius: 8px;
+  }
+
+  .nav-link.active {
+    font-size: large;
+    background-color: rgba(255, 145, 0, 0.939);
+    border-radius: 5px; 
+   
+    /* Change the color of the active link */
+     /* Make the active link bold */
+    /* Add any other styles you want for the active link */
+  }
