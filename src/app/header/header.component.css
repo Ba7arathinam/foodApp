@@ -26,10 +26,11 @@
     transition: 0.5s;
   }
   
-  a li:hover {
+  li:hover {
+    font-size: large;
     background-color: rgb(255, 145, 0);
-    border-radius: 0px;
-  } */
+    border-radius: 8px;
+  }
   
   .nav_names ,li{
   
@@ -48,12 +49,4 @@
   nav{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
-  a:hover{
-    color: #ff5722;
-  }
   
-
-.nav-item .nav-link.active {
-  color: #ff5722; 
-  font-weight: 500;
-}

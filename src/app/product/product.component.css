@@ -2,6 +2,9 @@
  input{
   margin-top: 2rem;
  }
+ .spin{
+  margin: 7%;
+ }
 /* .container{
   margin-top: 1rem;
 }
@@ -37,9 +40,7 @@
     justify-content:center ;
   }
   
- .spin{
-  margin: 7%;
- }
+ 
 
  button{
   margin-top: 2rem;
