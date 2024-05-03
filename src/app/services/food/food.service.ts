@@ -15,7 +15,7 @@ export class FoodService {
 
   getFood(): Observable<any> {
    
-    return this.http.get(this.foodurl);
+    return this.http.get(this.foodurl)
   }
   sendEmail(formData: any):Observable<any> {
     return this.http.post(`${this.mailurl}/send_email`, formData,{ responseType: 'text' });

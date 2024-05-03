@@ -23,11 +23,11 @@ constructor(private Route:Router,private payment:CartDataService,private http:Ht
 }
 //PhonePe
 PhonePe():any{
-  this.http.get<any>('https://balarathinam-phonepe-paymentgateway.onrender.com/pay?amount=' + this.totalAmount)
+  this.http.get<any>('https://stripe-payment-gatway.onrender.com/create-checkout-session?amount='+this.totalAmount)
   .subscribe(
-    (response) => {
+    (response:any) => {
 
-      window.location.href =response
+      window.location.href =response.url
     },
     (error) => {
       console.error('Error initiating payment:', error);

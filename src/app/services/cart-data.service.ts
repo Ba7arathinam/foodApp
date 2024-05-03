@@ -1,7 +1,6 @@
 import { CartItem } from './../shared/model/cartItems';
 import { Injectable } from '@angular/core';
-import { Cart } from '../shared/model/cart';
-import { BehaviorSubject } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'

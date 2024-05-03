@@ -7,6 +7,23 @@
       </div><br>
       <strong>Loading...</strong>
     </div>
+    
+<!-- <div class="card" aria-hidden="true" >
+ 
+  <div class="card-body " >
+    <h5 class="card-title placeholder-glow">
+      <span class="placeholder col-2"></span>
+    </h5>
+    <p class="card-text placeholder-glow">
+      <span class="placeholder col-7"></span>
+      <span class="placeholder col-4"></span>
+      <span class="placeholder col-4"></span>
+      <span class="placeholder col-6"></span>
+      <span class="placeholder col-8"></span>
+    </p>
+    <a class="btn btn-primary disabled placeholder col-6" aria-disabled="true"></a>
+  </div>
+</div> -->
   </div>
   <ng-template #content>
     <!-- <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4  g-4 card-height"> 
@@ -28,8 +45,9 @@
     </div> -->
 
 <!-- style2 -->
-    <div  id="main-page">
-      <div class="card border-0 rounded-0 shadow" *ngFor="let meal of filteredMeals; let i = index" style="width: 22rem;">
+    <div  id="main-page" data-aos="flip-left" >
+      <div class="card border-0 rounded-0 shadow" 
+      data-aos="flip-left" *ngFor="let meal of filteredMeals; let i = index" style="width: 22rem;">
         <img [src]="meal.strMealThumb"  class="card-img-top rounded" alt="Meal Thumbnail">
         <div class="card-body mt-3 mb-3">
           <div class="row">

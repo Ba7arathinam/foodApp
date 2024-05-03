@@ -1,13 +1,13 @@
 import { CurrencyPipe, NgClass, NgFor, NgIf, NgStyle } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FoodService } from '../services/food/food.service';
 import { Router } from '@angular/router';
 import { CartDataService } from '../services/cart-data.service';
 import { FormsModule } from '@angular/forms';
 import { FilterPipe } from '../pipes/filter.pipe';
 import { MatCardModule } from '@angular/material/card';
-
+declare var AOS:any;
 @Component({
   selector: 'app-product',
   standalone: true,
@@ -26,7 +26,7 @@ import { MatCardModule } from '@angular/material/card';
   templateUrl: './product.component.html',
   styleUrl: './product.component.css',
 })
-export class ProductComponent {
+export class ProductComponent  {
   loading: boolean = true;
   meals: any[] = [];
   filteredMeals: any[] = [];
@@ -54,7 +54,8 @@ export class ProductComponent {
     this.Route.navigate(['/cart']);
   }
 
-  ngOnInit() {
+  ngOnInit() :void {
+    // AOS.init();
     console.log('start product')
     this.val.getFood().subscribe(
       (res) => {
@@ -78,4 +79,5 @@ export class ProductComponent {
       );
     }
   }
+  
 }

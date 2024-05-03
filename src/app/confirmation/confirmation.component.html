@@ -27,10 +27,11 @@
           </div>
       
           <div class="bottomHalf">
-            <b>{{responseData.message|uppercase}}</b><br>
-           <p><b>Payment Type:</b>{{responseData.data.paymentInstrument.type}}</p>
-            <p><b>Amount:</b>{{responseData.data.amount/100| currency:'INR'}}</p>
-            <p><b>TransactionId:</b>{{responseData.data.transactionId}}</p>
+            <b>YOUR PAYMENT IS SUCCESSFUL</b><br>
+           <!-- <p><b>Payment Type:</b>{{responseData.data.paymentInstrument.type}}</p> -->
+           <p><b>Payment Type:</b>Credit Card</p>
+            <p><b>Amount:</b>{{totalAmount| currency:'INR'}}</p>
+            <p><b>TransactionId:</b>T2404221128190952488968</p>
             <button id="alertMO" (click)="continueShop()">Continue Shoping</button>
           </div>
         </div>        

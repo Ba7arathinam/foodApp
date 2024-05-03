@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {  RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
 import {MatIcon} from '@angular/material/icon'
 import { Router } from '@angular/router';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-
+declare var AOS:any;
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -11,7 +11,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   userId!:any;
   constructor(private router:Router,private http:HttpClient){}
   logOut(){
@@ -30,5 +30,8 @@ export class HeaderComponent {
   }
   productNav(){
     this.router.navigate(['products']);
+  }
+  ngOnInit(): void {
+    AOS.init()
   }
 }
