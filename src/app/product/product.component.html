@@ -1,14 +1,33 @@
 <div class="container">
-  <input type="text" class="form-control mb-3" placeholder="&#xF002; Search for a dish" style="font-family:Arial, FontAwesome" [(ngModel)]="searchTerm" (input)="filterMeals()">
-  <div *ngIf="loading; else content" class="text-center spin">
-    <div class="text-center">
+  <input type="text" class="form-control mb-3" placeholder="&#xF002; Search for a dish"
+    style="font-family:Arial, FontAwesome" [(ngModel)]="searchTerm" (input)="filterMeals()">
+  <div *ngIf="loading; else content">
+    <!-- <div class="text-center">
       <div class="spinner-border" role="status">
         <span class="visually-hidden">Loading...</span>
       </div><br>
       <strong>Loading...</strong>
-    </div>
-    
-<!-- <div class="card" aria-hidden="true" >
+    </div> -->
+    <div class="row m-0">
+    @for (i of '123456'; track $index) {
+      <div class="col-4 mb-3">
+        <p-skeleton height="14rem" styleClass="mb-2"></p-skeleton>
+        <p-skeleton width="14rem" styleClass="mb-2"></p-skeleton>
+        <p-skeleton styleClass="mb-2"></p-skeleton>
+        <p-skeleton width="5rem" styleClass="mb-2"></p-skeleton>
+        <div class="row">
+          <div class="col-3">
+
+          </div>
+          <div class="col-9">
+            <p-skeleton width="16rem" height="4rem" styleClass="mt-3"></p-skeleton>
+          </div>
+        </div>
+      </div>
+    }
+  </div>  
+
+    <!-- <div class="card" aria-hidden="true" >
  
   <div class="card-body " >
     <h5 class="card-title placeholder-glow">
@@ -44,11 +63,11 @@
       </div>
     </div> -->
 
-<!-- style2 -->
-    <div  id="main-page" data-aos="flip-left" >
-      <div class="card border-0 rounded-0 shadow" 
-      data-aos="flip-left" *ngFor="let meal of filteredMeals; let i = index" style="width: 22rem;">
-        <img [src]="meal.strMealThumb"  class="card-img-top rounded" alt="Meal Thumbnail">
+    <!-- style2 -->
+    <div id="main-page">
+      <div class="card border-0 rounded-0 shadow" data-aos="zoom-in" *ngFor="let meal of filteredMeals; let i = index"
+        style="width: 22rem;">
+        <img [src]="meal.strMealThumb" class="card-img-top rounded" alt="Meal Thumbnail">
         <div class="card-body mt-3 mb-3">
           <div class="row">
             <div class="col-10">
@@ -56,14 +75,16 @@
               <div class="card-text">
                 <div>
                   <ng-container *ngFor="let star of getStarArray(meal.rating)">
-                    <i class="fas fa-star star-icons" [ngStyle]="{'color': meal.rating < 3 ? 'red' : (meal.rating == 3 ? 'orange' : 'green')}" ></i>
+                    <i class="fas fa-star star-icons"
+                      [ngStyle]="{'color': meal.rating < 3 ? 'red' : (meal.rating == 3 ? 'orange' : 'green')}"></i>
                   </ng-container>(123)
                 </div>
-                
+
               </div>
             </div>
             <div class="col-2">
-              <i class="fa-regular fa-heart" style="font-size:x-large;"></i>            </div>
+              <i class="fa-regular fa-heart" style="font-size:x-large;"></i>
+            </div>
           </div>
         </div>
         <div class="row align-items-center text-center g-0">
@@ -71,13 +92,14 @@
             <h5>{{ meal.amount | currency:'INR' }}</h5>
           </div>
           <div class="col-8">
-            <button style="display: flex;justify-content: center;" class="btn btn-dark w-100 p-3 rounded-0 text-warning" (click)="addToCart(meals[i])"><i class="material-icons">shopping_cart</i>ADD TO CART</button>
+            <button style="display: flex;justify-content: center;" class="btn btn-dark w-100 p-3 rounded-0 text-warning"
+              (click)="addToCart(meals[i])"><i class="material-icons">shopping_cart</i>ADD TO CART</button>
           </div>
         </div>
       </div>
     </div>
- 
- 
+
+
 
     <!-- style3 -->
 
@@ -106,6 +128,6 @@
         </div>
       </div>
     </div> -->
-    
+
   </ng-template>
 </div>

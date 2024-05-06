@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { Router, RouterLink, RouterModule } from '@angular/router';
+import {  Router,RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule,RouterLink,RouterModule],
+  imports: [FormsModule,RouterModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -16,9 +16,9 @@ export class LoginComponent {
   password: string = '';
  
   constructor(private router: Router) {}
-  toLogin(){
-    this.router.navigate(['signup']);
-  }
+  // toLogin(){
+  //   this.router.navigate(['signup']);
+  // }
   login(email: string, password: string): Promise<any> {
     const data = {
       email,

@@ -8,7 +8,7 @@ import { SiginComponent } from './sigin/sigin.component';
 import { PaymentComponent } from './payment/payment.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
-
+import { RouterModule } from '@angular/router';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -21,5 +21,6 @@ export const routes: Routes = [
     {path:'payment',component:PaymentComponent,title:'ORDERZIT | Payment'},
     {path:'confirmation',component:ConfirmationComponent,title:'ORDERZIT | confirmation'},
     {path:'404NotFound',component:NotFoundPageComponent,title:'404 Not Found'},
-    { path: '**', redirectTo: '404NotFound' }
+    { path: '**', redirectTo: '404NotFound' },
+
 ];

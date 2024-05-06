@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import { Router,RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-sigin',
   standalone: true,
-  imports: [FormsModule,RouterLink],
-  providers:[Router],
+  imports: [FormsModule,RouterModule],
   templateUrl: './sigin.component.html',
   styleUrl: './sigin.component.css'
 })

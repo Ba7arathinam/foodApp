@@ -2,11 +2,11 @@ import { CurrencyPipe, NgClass, NgFor, NgIf, NgStyle } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FoodService } from '../services/food/food.service';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { CartDataService } from '../services/cart-data.service';
 import { FormsModule } from '@angular/forms';
 import { FilterPipe } from '../pipes/filter.pipe';
-import { MatCardModule } from '@angular/material/card';
+import {SkeletonModule} from 'primeng/skeleton'
 declare var AOS:any;
 @Component({
   selector: 'app-product',
@@ -16,17 +16,20 @@ declare var AOS:any;
     NgFor,
     NgClass,
     CurrencyPipe,
+    RouterModule,
     NgIf,
     FormsModule,
     FilterPipe,
     NgClass,
-    NgStyle
+    NgStyle,
+    SkeletonModule
   ],
-  providers: [FoodService, Router, CartDataService],
+  providers: [FoodService, CartDataService],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css',
 })
 export class ProductComponent  {
+
   loading: boolean = true;
   meals: any[] = [];
   filteredMeals: any[] = [];

@@ -1,17 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { CartDataService } from '../services/cart-data.service';
 import { CurrencyPipe, NgFor, NgIf } from '@angular/common';
 import {MatIcon} from '@angular/material/icon'
 import { CartItem } from '../shared/model/cartItems';
-import { FormsModule } from '@angular/forms';
+import { Form, FormControlName, FormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 import { Subscription } from 'rxjs';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+
 
 
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [CurrencyPipe,NgIf,NgFor,MatIcon,FormsModule,RouterModule],
+  imports: [CurrencyPipe,NgIf,NgFor,MatIcon,FormsModule,RouterModule,ReactiveFormsModule],
   providers:[CartDataService],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css'
@@ -20,10 +24,17 @@ export class CartComponent {
 
   cartItems: CartItem[] = [];
   totalAmount: number = 0;
-  private cartSubscription!: Subscription;
 
 
-  constructor(private cartService: CartDataService,private route:Router) {}
+ 
+
+
+
+  constructor(private cartService: CartDataService,private route:Router) {
+    
+  }
+ 
+  
 
   ngOnInit(): void {
     console.log('start cart')
