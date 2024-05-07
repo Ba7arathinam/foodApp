@@ -5,7 +5,6 @@ import { FoodService } from '../services/food/food.service';
 import { Router, RouterModule } from '@angular/router';
 import { CartDataService } from '../services/cart-data.service';
 import { FormsModule } from '@angular/forms';
-import { FilterPipe } from '../pipes/filter.pipe';
 import {SkeletonModule} from 'primeng/skeleton'
 declare var AOS:any;
 @Component({
@@ -19,7 +18,6 @@ declare var AOS:any;
     RouterModule,
     NgIf,
     FormsModule,
-    FilterPipe,
     NgClass,
     NgStyle,
     SkeletonModule
